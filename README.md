@@ -4,6 +4,7 @@
     git clone git@github.com:RichardLee1978/LJsystem.git
     git push -u origin master
 or
+
      echo "# LJsystem" >> README.md
      git init
      git add README.md
