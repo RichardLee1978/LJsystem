@@ -1,0 +1,44 @@
+﻿@model LJsystem.Models.SystemRoles
+@section Header{
+    <title>链集-角色管理</title>
+    <link href="/assert/dist/css/home.css" rel="stylesheet">
+}
+
+@Html.Action("Slide", "ChildAction", Model )
+<div class="content-panel">
+    <div class="summary2 clearfix">
+        <h3 class="page-header">添加角色</h3> 
+        <form action="/System/Roles/Add" method="post">
+            <div class="form-group">
+                <label for="exampleInputEmail1">角色名称</label>
+                <input type="email" class="form-control"  placeholder="角色名称">
+            </div>
+            <div class="form-group">
+                <div class="col-sm-12"> 
+                    
+                        <label class="checkbox-inline"> 
+                            <input type="checkbox"> 系统管理 
+                        </label>
+                       
+                        <label class="checkbox-inline">
+                            <input type="checkbox"> 用户管理
+                        </label> 
+                    <label class="checkbox-inline">
+                        <input type="checkbox"> 用户管理
+                    </label> 
+                    <label class="checkbox-inline">
+                        <input type="checkbox"> 订单管理
+                    </label> 
+                    
+                    <label class="checkbox-inline">
+                        <input type="checkbox"> 商品管理
+                    </label>  
+                 </div>
+            </div>
+            <button type="submit" class="btn btn-primary">确认</button>
+        </form>
+    </div>
+</div>
+    @section Footer{
+        <script src='/assert/dist/js/home.js'></script>
+    }

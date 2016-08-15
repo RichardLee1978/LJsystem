@@ -1,0 +1,22 @@
+﻿@model LJsystem.Models.SystemDepartment
+@section Header{
+    <title>链集-部门管理</title>
+    <link href="/assert/dist/css/home.css" rel="stylesheet">
+}
+@Html.Action("Slide", "ChildAction", Model)
+<div class="content-panel">
+
+<div class="summary2 clearfix">
+        <h3 class="page-header">添加部门</h3> 
+        <form action="/System/Department/Add" method="post">
+            <div class="form-group">
+                <label for="exampleInputEmail1">部门名称</label>
+                <input type="email" class="form-control"  placeholder="部门名称">
+            </div>
+            <button type="submit" class="btn btn-primary">确认</button>
+        </form>
+</div>
+</div>
+    @section Footer{
+        <script src='/assert/dist/js/home.js'></script>
+    }

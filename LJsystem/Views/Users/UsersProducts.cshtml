@@ -1,0 +1,177 @@
+﻿@model LJsystem.Models.UsersProducts
+@section Header{
+    <title>链集-用户管理</title>
+    <link href="/assert/dist/css/home.css" rel="stylesheet">
+}
+@Html.Action("Slide", "ChildAction", Model)
+
+<div class="content-panel">
+    <!--顶部的路径导航以及工具条-->
+    <div class="location-toolbar clearfix">
+        <div class="location pull-left">当前位置，用户订单管理 </div>
+    </div>
+    <!--过滤表单-->
+    <form class="form-inline" method="post" action="/User/Search">
+        <div class="filter-panel">
+            <div class="form-group ">
+                <label>用户手机号：</label>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="ownerPhone" placeholder="" maxlength="11" data-validation-engine="validate[custom[mobile]]">
+            </div>
+            <div class="form-group ">
+                <label>用户名：</label>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="ownerPhone" placeholder="" data-validation-engine="validate[custom[mobile]]">
+            </div>
+            <div class="form-group ">
+                <label>用户来源：</label>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="ownerPhone" placeholder="" data-validation-engine="validate[custom[mobile]]">
+            </div>
+            <br />
+            <div class="form-group mt-10 ">
+                <label>申请时间：</label>
+            </div>
+            <div class="form-group mt-10">
+                <input type="text" class="form-control" name="sourceid" id="ffc-sourceid" placeholder="">
+            </div>
+            <div class="form-group mt-10">
+                <label>状态：</label>
+            </div>
+            <div class="form-group mt-10">
+                <select class="form-control" name="status" id="ffc-status">
+                    <option value="全部" selected>全部</option>
+                    <option value="已冻结">已冻结</option>
+                    <option value="等待审核">等待审核</option>
+                    <option value="已通过">已通过</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary mt-10">查询</button>
+        </div>
+
+        <div class="table-container table-center">
+            <table class="table table-condensed table-methodize table-striped">
+                <thead>
+                    <tr>
+                        <th width="20">#</th>
+                        <th>用户手机</th>
+                        <th>用户来源</th>
+                        <th>申请时间</th>
+                        <th>用户名</th>
+
+
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+
+                        <td class="arial"><span>13121221212</span>
+
+                        <td>
+                            网站
+                        </td>
+                        <td>
+                            2015/12/1
+                            <br />
+                            12:00
+                        </td>
+                        <td>找钢网</td>
+
+
+                        <td>等待审核</td>
+                        <td>
+                            <a href="/Users/UsersProductsDetails/1101"  target="_blank" class="btn btn-info btn-sm">查看</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+
+                        <td class="arial"><span>15892919919</span>
+
+                        <td>
+                            线下
+                        </td>
+                        <td>
+                            2015/12/1
+                            <br />
+                            12:00
+                        </td>
+                        <td>osos</td>
+
+                        <td>已冻结</td>
+                        <td>
+                            <a href="/Users/UsersProductsDetails/11011"  target="_blank" class="btn btn-info btn-sm">查看</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+
+                        <td class="arial"><span>100002</span>
+
+                        <td>
+                            网站
+                        </td>
+                        <td>
+                            2015/12/1
+                            <br />
+                            12:00
+                        </td>
+                        <td>啊啊啊</td>
+
+                        <td>已通过</td>
+                        <td>
+                            <a href="/Users/UsersProductsDetails/1101" target="_blank" class="btn btn-info btn-sm">查看</a>
+
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <!--最下面的分页器-->
+        <div class="assistant clearfix">
+            <div class="total">
+                <span class="text-primary arial">1-30</span>
+                <span> / 共</span>
+                <span class="text-primary arial">800</span>
+                <span>条</span>
+            </div>
+            <ul class="pagination">
+                <li class="disabled">
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="javascript:void(0);" data-page="2">2</a></li>
+                <li class="disabled"><a href="#">...</a></li>
+                <li><a href="javascript:void(0);" data-page="20">20</a></li>
+                <li><a href="javascript:void(0);" data-page="21">21</a></li>
+                <li><a href="javascript:void(0);" data-page="22">22</a></li>
+                <li class="disabled"><a href="#">...</a></li>
+                <li><a href="javascript:void(0);" data-page="99">99</a></li>
+                <li><a href="javascript:void(0);" data-page="100">100</a></li>
+                <li>
+                    <a href="javascript:void(0);" data-page="2" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                    <input type="hidden" name="page" value="">
+                </li>
+            </ul>
+        </div>
+    </form>
+</div>
+
+@section Footer{
+    <script src='/assert/dist/js/home.js'></script>
+}
+
+
+
+

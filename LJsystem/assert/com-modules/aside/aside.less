@@ -1,0 +1,80 @@
+﻿/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+侧边栏导航区域，包括logo等的深色条
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.aside {
+    background: rgba(39, 44, 50, .8);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    width: 240px;
+
+    .logo {
+        padding: 10px;
+    }
+    .account-panel {
+        border-top: 1px solid #5b6166;
+        color: #979da7;
+        font: normal normal normal 12px/25px microsoft yahei, simsun;
+        padding: 5px;
+
+        a {
+            color: #fff;
+            margin: 0 5px;
+            text-decoration: none;
+
+            &:hover {
+                color: #09f;
+            }
+        }
+    }
+    dl {
+        border-top: 1px solid #5b6166;
+        padding: 5px 0;
+        margin: 0;
+
+        .prefix {
+            margin: 0 15px 0 10px;
+        }
+        dt {
+            color: #fff;
+            cursor: pointer;
+            font: normal normal normal 18px/32px microsoft yahei, simsun;
+            margin-bottom: 5px;
+
+            .prefix {
+                font-size: 22px;
+                top:3px;
+            }
+            .handle {
+                display: block;
+                float: right;
+                font-size: 12px;
+                margin: 0 10px;
+                top:12px;
+            }
+        }
+        dd {
+            display: none;
+            width: 100%;
+
+            a {
+                color: #979da7;
+                display: block;
+                font: normal normal normal 14px/30px microsoft yahei, simsun;
+                text-decoration: none;
+                text-indent: 10px;
+
+                &:hover {
+                    background: rgba(36, 39, 45, .5);
+                    color: #fff;
+                }
+                &.on {
+                    background: rgba(36, 39, 45, .5);
+                    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+﻿@model LJsystem.Models.Slide
+<div class="aside">
+    <!--logo区域-->
+    <div class="logo">
+      <!--<img src="http://cdn01.ttpaicdn.com/ttpai/css/images/logo-reverse-150.png"/>-->
+    </div>
+    <!--账号及密码修改和退出等按钮群-->
+    <div class="account-panel">
+        您好 @Model.GetMenuAndUserName()["CurrentUserName"]
+       
+       
+        @*<a href="#"><i class="glyphicon glyphicon-wrench"></i>修改密码</a>*@
+        <a href="/logout"><i class="glyphicon glyphicon-paste"></i>退出</a>
+    </div>
+    <!--具体的菜单,expand表示展开，contract表示收缩-->
+    <dl data-status="@{if (Model.bar == "sys")
+                {<text>expand</text>}
+                    else {<text>>contract</text>}
+                }">
+        <dt class="clearfix" title="点击展开/收缩该模块子菜单"><i class="glyphicon glyphicon-home prefix"></i><span>系统管理</span><i class="glyphicon glyphicon-chevron-down handle"></i></dt>
+        <dd><a href="/System/EmployeeSearch"><i class="prefix"></i><span>员工管理</span></a></dd>
+        <dd><a href="/System/Roles"><i class="prefix"></i><span>角色管理</span></a></dd>
+        <dd><a href="/System/Department"><i class="prefix"></i><span>部门管理</span></a></dd>
+        <dd><a href="/System/Assign"><i class="prefix"></i><span>关系分配</span></a></dd>
+        
+    </dl>
+   
+    <dl data-status="@{if (Model.bar == "user")
+        {<text>expand</text>}
+          else {<text>contract</text>}
+        }">
+        <dt class="clearfix" title="点击展开/收缩该模块子菜单"><i class="glyphicon glyphicon-star prefix"></i><span>用户管理</span><i class="glyphicon glyphicon-chevron-down handle"></i></dt>
+        <dd><a href="/Users"><i class="prefix"></i><span>用户审核</span></a></dd>
+        <dd><a href="/Users/Products"><i class="prefix"></i><span>商品审核</span></a></dd>
+    </dl>
+
+    <dl data-status="@{if (Model.bar == "order")
+        {<text>expand</text>}
+            else {<text>>contract</text>}
+        }">
+        <dt class="clearfix" title="点击展开/收缩该模块子菜单"><i class="glyphicon glyphicon-cog prefix"></i><span>订单管理</span><i class="glyphicon glyphicon-chevron-down handle"></i></dt>
+        <dd><a href="/Orders"><i class="prefix"></i><span>订单审核</span></a></dd>
+    </dl>
+    <dl data-status="@{if (Model.bar == "products")
+        {<text>expand</text>}
+            else {<text>>contract</text>}
+        }">
+        <dt class="clearfix" title="点击展开/收缩该模块子菜单"><i class="glyphicon glyphicon-list-alt prefix"></i><span>商品管理</span><i class="glyphicon glyphicon-chevron-down handle"></i></dt>
+        <dd><a href="#"><i class="prefix"></i><span>添加分类</span></a></dd>
+
+    </dl>
+
+</div>

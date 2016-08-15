@@ -1,0 +1,42 @@
+﻿@section Header{
+    <title>链集-登录</title>
+    <link href="/assert/dist/css/login.css" rel="stylesheet">
+
+}
+<div class="container login-header clearfix">
+    <div class="pull-left">
+        @*<img src="http://cdn06.ttpaicdn.com/ttpai/css/images/logo-150.png">*@
+        <h2><span class="roman"></span>链集后台系统管理中心 <span class="roman">V 1.0</span></h2>
+    </div>
+</div>
+<div class="login-banner">
+    <div class="login-panel">
+        <form action="/login" method="post" class="validate">
+            <div class="form-group">
+                <label>用户名：</label>
+                <input type="text" class="form-control ime-disabled" name="UserName" maxlength="24" placeholder="不大于24位的字母数字组合" data-validation-engine="validate[required,custom[onlyLetterNumber]]">
+            </div>
+            <div class="form-group">
+                <label>密码：</label>
+                <input type="password" class="form-control" name="PassWord" placeholder="">
+            </div>
+            <div class="form-group">
+                <input type="checkbox" checked /> 记住用户名
+                <input type="hidden" name="redirectUrl" value='@ViewBag.url'/>
+            </div>
+            <input type="submit" class="btn btn-primary btn-lg btn-block" value="登录">
+        </form>
+    </div>
+</div>
+<div class="login-footer container clearfix">
+    <ul class="copyright pull-left">
+        <li>买材网—中国领先的大宗商品交易平台</li>
+        <li>Copyright© 2004-2015 maicai360.cn. Allrights reserved沪ICP备12024568号</li>
+    </ul>
+    <ul class="pull-right">
+        <li>客服热线：40085-77885邮箱：service@maicai360.cn</li>
+    </ul>
+</div>
+@section Footer{
+    <script src='/assert/dist/js/login.js'></script>
+}

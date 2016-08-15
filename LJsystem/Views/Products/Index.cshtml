@@ -1,0 +1,30 @@
+﻿@model LJsystem.Models.Products
+
+@section Header{
+    <title>链集-用户管理</title>
+    <link href="/assert/dist/css/home.css" rel="stylesheet">
+}
+@Html.Action("Slide", "ChildAction", Model)
+<div class="content-panel">
+    <div class="summary2 clearfix">
+        <h3 class="page-header">添加商品</h3>
+        <form action="/System/Roles/Add" method="post">
+            <div class="form-group">
+                <label for="exampleInputEmail1">商品大分类</label>
+                <input type="email" class="form-control" placeholder="商品大分类">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">商品小分类</label>
+                <input type="email" class="form-control" placeholder="商品小分类">
+            </div>
+            <button type="submit" class="btn btn-primary">确认</button>
+        </form>
+    </div>
+</div>
+@section Footer{
+    <script src='/assert/dist/js/home.js'></script>
+}
+
+
+
+

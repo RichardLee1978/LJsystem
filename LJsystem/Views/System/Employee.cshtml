@@ -1,0 +1,63 @@
+﻿@model LJsystem.Models.SystemEmployee
+@section Header{
+    <title>链集-首页</title>
+    <link href="/assert/dist/css/home.css" rel="stylesheet">
+}
+@Html.Action("Slide", "ChildAction",  Model )
+<div class="content-panel">
+    <div class="location-toolbar clearfix">
+        <div class="location pull-left">当前位置，用户管理<span>--</span>新增员工 </div>
+    </div>
+    <div class="summary2 clearfix">
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="/System/Employee">添加员工</a></li>
+            <li role="presentation"><a href="/System/EmployeeSearch">员工查询</a></li>       
+        </ul>
+            <h3 class="page-header">添加员工</h3> 
+        
+        <form action="/System/Employee/Add" method="post">
+            <div class="form-group">
+                <label for="exampleInputEmail1">员工姓名</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="员工姓名">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">密码</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="密码">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">确认密码</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="确认密码">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">手机号码</label>
+                <input type="text" class="form-control" maxlength="11" placeholder="手机号码">
+            </div>
+            <div class="form-group">
+                <label >选择角色</label>
+                <select class="form-control"> 
+                    <option>1</option> 
+                    <option>2</option> 
+                    <option>3</option>
+                    <option>4</option> 
+                    <option>5</option> 
+                </select>
+            </div>
+            <div class="form-group">
+                <label>选择部门</label>
+                <select class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">确认</button>
+        </form>
+    </div>
+</div>
+@section Footer{
+    <script src='/assert/dist/js/home.js'></script>
+}
+
+

@@ -1,0 +1,36 @@
+﻿@model LJsystem.Models.SystemAssign
+
+@section Header{
+    <title>链集-关系分配</title>
+    <link href="/assert/dist/css/home.css" rel="stylesheet">
+}
+@Html.Action("Slide", "ChildAction", Model)
+<div class="content-panel">
+    <div class="summary2 clearfix">
+        <h3 class="page-header">添加部门</h3>
+        <form action="/System/Assign/Add" method="post">
+            <div class="form-group">
+                <label for="exampleInputEmail1">员工</label>
+                <input type="email" class="form-control" placeholder="员工姓名">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">员工类型</label>
+                <select class="form-control">
+                    <option>独立第三方</option>
+                    <option>自营</option>
+                    <option>联营</option>
+                    <option>委托</option>
+                    <option>半寄售</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">确认</button>
+        </form>
+    </div>
+</div>
+    @section Footer{
+        <script src='/assert/dist/js/home.js'></script>
+    }
+
+
+
+
